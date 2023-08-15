@@ -1,9 +1,15 @@
-import styles from "./Header.module.css";
+//import styles from "./Header.module.css";
+
+import logo from "../../assets/images/book-finder-logo.png";
 
 export function Header() {
   return (
-    <header className={styles.header}>
-      <strong>Book Finder</strong>
+    <header className="flex flex-col justify-center items-center p-10">
+      <img className="w-[250px]" src={logo} />
+
+      <h1 className="pt-8 text-4xl text-center font-medium max-w-[600px]">
+        Pesquise os livros que você está procurando de qualquer lugar
+      </h1>
     </header>
   );
 }
