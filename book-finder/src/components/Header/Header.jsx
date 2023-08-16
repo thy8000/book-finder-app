@@ -1,5 +1,3 @@
-//import styles from "./Header.module.css";
-
 import logo from "../../assets/images/book-finder-logo.png";
 
 export function Header() {
@@ -7,7 +5,7 @@ export function Header() {
     <header className="flex flex-col justify-center items-center p-10">
       <img className="w-[250px]" src={logo} />
 
-      <h1 className="pt-8 text-4xl text-center font-medium max-w-[600px]">
+      <h1 className="pt-8 text-4xl text-center text-orange-600 font-medium max-w-[600px]">
         Pesquise os livros que você está procurando de qualquer lugar
       </h1>
     </header>
