@@ -16,6 +16,7 @@ export default {
       stone: colors.stone,
       red: colors.red,
       orange: colors.orange,
+      slate: colors.slate,
     },
     extend: {},
   },
