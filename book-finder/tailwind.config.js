@@ -14,6 +14,8 @@ export default {
       white: colors.white,
       gray: colors.gray,
       stone: colors.stone,
+      red: colors.red,
+      orange: colors.orange,
     },
     extend: {},
   },
