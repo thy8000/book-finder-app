@@ -13,7 +13,7 @@ export function Form() {
         
         <div className="relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <MagnifyingGlass size={24} color="orange" />
+            <MagnifyingGlass size={24} color="red" />
           </div>
 
           <input
@@ -26,7 +26,7 @@ export function Form() {
 
           <button
             type="submit"
-            className="text-white absolute right-2.5 bottom-2.5 bg-orange-500 hover:bg-red-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white absolute right-2.5 bottom-2.5 bg-red-500 hover:bg-red-300 font-medium rounded-lg text-sm px-4 py-2"
           >
             Pesquisar
           </button>
