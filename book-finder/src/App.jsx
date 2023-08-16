@@ -1,11 +1,14 @@
-import {Header} from './components/Header/Header';
+import { Header } from "./components/Header/Header";
+import { Form } from "./components/Form/Form";
 
-import './index.css';
+import "./index.css";
 
 function App() {
   return (
     <div>
       <Header />
+
+      <Form />
     </div>
   );
 }
