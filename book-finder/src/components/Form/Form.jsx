@@ -1,9 +1,23 @@
 import { MagnifyingGlass } from "phosphor-react";
 
+import GoogleBooksAPI from "../../services/GoogleBooks/Api";
+
 export function Form() {
+  async function searchBooks(){
+    event.preventDefault();
+
+    const valueToSearch = event.target.valueToSearch.value;
+
+    const googleBooks = new GoogleBooksAPI();
+
+    const booksData = await googleBooks.searchBooks(valueToSearch);
+
+    console.log(booksData.items);
+  }
+
   return (
     <div className="flex justify-center">
-      <form className="w-[350px] lg:w-[500px]">
+      <form className="w-[350px] lg:w-[500px]" onSubmit={searchBooks}>
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -18,7 +32,7 @@ export function Form() {
 
           <input
             type="search"
-            id="default-search"
+            name="valueToSearch"
             className="block w-full p-4 pl-14 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 line-clamp-1"
             placeholder="Digite o nome do livro"
             required
