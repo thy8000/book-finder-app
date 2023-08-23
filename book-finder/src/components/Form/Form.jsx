@@ -1,9 +1,15 @@
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+//import { css } from "@emotion/react";
 import { MagnifyingGlass } from "phosphor-react";
+
 
 import GoogleBooksAPI from "../../services/GoogleBooks/Api";
 
-export function Form() {
-  async function searchBooks(){
+export function Form({ setBooksData, setLoading }) {
+  async function searchBooks(event) {
+    setLoading(true);
+
     event.preventDefault();
 
     const valueToSearch = event.target.valueToSearch.value;
@@ -12,7 +18,9 @@ export function Form() {
 
     const booksData = await googleBooks.searchBooks(valueToSearch);
 
-    console.log(booksData.items);
+    setBooksData(booksData.items);
+
+    setLoading(false);
   }
 
   return (
@@ -24,7 +32,7 @@ export function Form() {
         >
           Search
         </label>
-        
+
         <div className="relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <MagnifyingGlass size={24} color="red" />

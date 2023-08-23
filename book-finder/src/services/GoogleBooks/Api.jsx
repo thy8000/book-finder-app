@@ -1,10 +1,10 @@
 class GoogleBooksAPI {
   constructor() {
-    this.apiUrl = "https://www.googleapis.com/books/v1/volumes";
+    this.apiUrl = "https://www.googleapis.com/books/v1/volumes?maxResults=40&";
   }
 
   async searchBooks(queryString) {
-    const requestURL = this.apiUrl + "?q=" + queryString;
+    const requestURL = this.apiUrl + "q=" + queryString;
 
     try {
       const response = await fetch(requestURL);
